@@ -42,21 +42,7 @@ git remote add origin https://github.com/avelmuruganofficials-sudo/git-practice7
             archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
         }
 
-        success {
-            emailext(
-                subject: "✅ Playwright Tests Passed - Landydev",
-                body: "All Playwright tests passed successfully.",
-                to: "yourmail@gmail.com"
-            )
-        }
-
-        failure {
-            emailext(
-                subject: "❌ Playwright Tests Failed - Landydev",
-                body: "Tests failed. Please check Jenkins console logs.",
-                to: "yourmail@gmail.com"
-            )
-        }
+       
     }
 }
 
